@@ -9,7 +9,6 @@
     "build": "tsc",
     "test": "jest",
     "watch": "tsc -w",
-    "test": "jest",
     "serve": "pm2 start dist/server.js --watch -i max --interpreter=/Users/lhill/.nvm/versions/node/v12.11.0/bin/node",
     "delete": "pm2 delete all",
     "benchmark": "./benchmark/benchmark.sh"
