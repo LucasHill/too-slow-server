@@ -1,9 +1,11 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+import { encryptPassword } from './controllers/encryption';
 
 const app = express();
+app.use(bodyParser.json());
 
-app.get('/', function(_req, res) {
-  res.send('Hello World!');
-});
+
+app.post('/encryptPassword', encryptPassword);
 
 export default app;
