@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "https://github.com/LucasHill/too-slow-server",
   "author": "Lucas Hill",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.8",
+    "nodemon": "^1.19.2",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
