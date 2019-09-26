@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "serve": "tsc && nodemon dist/server.js"
+    "serve": "tsc && nodemon dist/server.js",
+    "benchmark": "./benchmark/benchmark.sh"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.1",

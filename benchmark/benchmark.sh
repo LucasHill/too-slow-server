@@ -1,0 +1,1 @@
+wrk -t12 -c400 -d30s -s ./benchmark/post.lua http://localhost:3000/encryptPassword

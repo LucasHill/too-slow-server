@@ -1,0 +1,8 @@
+curl -X POST \
+  http://localhost:3000/encryptPassword \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 653fcbe6-b835-48e8-9f43-ca9159949fb3' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"password":123
+}'
