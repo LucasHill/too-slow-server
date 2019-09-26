@@ -1,15 +1,16 @@
 import { Request, Response } from "express";
 import { generatePrimes } from "../utils/generatePrimes";
-import { obfuscate } from "../utils/obfuscate";
+import { obfuscateWorker } from "../utils/obfuscate";
 
-export function encryptPassword(req: Request, res: Response) {
+export async function encryptPassword(req: Request, res: Response) {
   const password = req.body.password;
 
   const prime = 1299709;
   const secondPrime = 104729;
   
-  const result = obfuscate(password*prime*secondPrime);
+  const worker = obfuscateWorker(password*prime*secondPrime);
 
+  const result = await worker;
   res.send({ encryptedPassword: result });
 }
 

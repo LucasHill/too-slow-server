@@ -1,3 +1,7 @@
+import { Worker } from 'worker_threads';
+import workerpool from 'workerpool';
+
+
 export function obfuscate(n: number) {
   for(let i = 1; i<= 100000000; i++) {
     if(i % 2 === 0) {
@@ -10,4 +14,13 @@ export function obfuscate(n: number) {
   }
 
   return n;
+}
+
+const pool = workerpool.pool({
+  minWorkers: 1,
+  maxWorkers: 1
+})
+
+export function obfuscateWorker(n: number) {
+  return pool.exec(obfuscate, [n]);
 }
