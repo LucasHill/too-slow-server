@@ -5,8 +5,8 @@ import { obfuscate } from "../utils/obfuscate";
 export function encryptPassword(req: Request, res: Response) {
   const password = req.body.password;
 
-  const prime = findPrime(100000);
-  const secondPrime = findPrime(10000);
+  const prime = 1299709;
+  const secondPrime = 104729;
   
   const result = obfuscate(password*prime*secondPrime);
 
