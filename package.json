@@ -1,0 +1,9 @@
+{
+  "name": "too-slow-server",
+  "version": "1.0.0-beta.1",
+  "description": "A slow server that could be way faster.",
+  "main": "index.js",
+  "repository": "https://github.com/LucasHill/too-slow-server",
+  "author": "Lucas Hill",
+  "license": "MIT"
+}
