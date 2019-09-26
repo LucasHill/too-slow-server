@@ -10,7 +10,7 @@ export function encryptPassword(req: Request, res: Response) {
   
   const result = obfuscate(password*prime*secondPrime);
 
-  res.send({ encryptPassword: result });
+  res.send({ encryptedPassword: result });
 }
 
 function findPrime(nthPrime: number): number {
